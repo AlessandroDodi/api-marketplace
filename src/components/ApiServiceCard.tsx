@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Typography, Chip, Button, Stack, Paper } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-interface ApiCardProps {
+interface ApiServiceCardProps {
   id: number;
   name: string;
   category: string;
@@ -11,7 +11,7 @@ interface ApiCardProps {
   onView: () => void;
 }
 
-const ApiCard: React.FC<ApiCardProps> = ({
+const ApiServiceCard: React.FC<ApiServiceCardProps> = ({
   id,
   name,
   category,
@@ -106,4 +106,4 @@ const ApiCard: React.FC<ApiCardProps> = ({
   );
 };
 
-export default ApiCard;
+export default ApiServiceCard;

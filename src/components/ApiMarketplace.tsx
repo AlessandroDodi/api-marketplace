@@ -12,7 +12,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { useEffect, useState } from "react";
 import { supabase } from "../supabase-client";
 import SkeletonApiCard from "./SkeletonApiCard";
-import ApiCard from "./apiCard";
+import ApiServiceCard from "./ApiServiceCard";
 
 interface ApiService {
   id: number;
@@ -146,7 +146,7 @@ const ApiMarketplace = () => {
                 size={{ xs: 12, sm: 12, md: 6, lg: 4 }}
                 key={api.id || index}
               >
-                <ApiCard
+                <ApiServiceCard
                   id={api.id}
                   name={api.name}
                   category={api.category}

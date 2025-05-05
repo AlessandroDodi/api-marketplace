@@ -22,7 +22,7 @@ const fadeIn = keyframes`
   }
 `;
 
-const Hero = () => {
+const HeroSection = () => {
   return (
     <Stack
       alignContent={"center"}
@@ -94,4 +94,4 @@ const Hero = () => {
     </Stack>
   );
 };
-export default Hero;
+export default HeroSection;

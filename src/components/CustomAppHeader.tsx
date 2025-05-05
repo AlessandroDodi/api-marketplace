@@ -18,7 +18,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import AddApiServiceForm from "./AddApiServiceForm";
 
-const AppHeader = () => {
+const CustomAppHeader = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -177,4 +177,4 @@ const AppHeader = () => {
   );
 };
 
-export default AppHeader;
+export default CustomAppHeader;
