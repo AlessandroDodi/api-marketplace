@@ -3,7 +3,7 @@ import CustomAppHeader from "./CustomAppHeader";
 
 const PageLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <Stack alignItems={"center"} width={"100vw"}>
+    <Stack alignItems={"center"} width={"100%"}>
       <Stack padding={0} maxWidth={1400} width={"100%"}>
         <CustomAppHeader />
         <Stack
