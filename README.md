@@ -1,5 +1,7 @@
 # 🛡️ API Antibot Marketplace
 
+View the project [here](https://api-antibot-marketplace.netlify.app/)
+
 A minimal web application that functions as a micro-marketplace for antibot API services. Built using **React + Vite** on the frontend and **Supabase** as the backend. Designed first in [Figma](https://www.figma.com/design/Tvbiap41bZV0nmCVaB8i78/API-Marketplace?node-id=0-1&t=8UlzqPqeH0DXjhYt-1).
 
 > Built for a coding challenge with a focus on clean structure, minimal UX, and fast development.
