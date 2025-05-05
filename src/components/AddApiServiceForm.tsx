@@ -131,14 +131,21 @@ const AddApiServiceForm: React.FC<AddApiServiceFormProps> = ({
             ? "16px 16px 0 0 !important"
             : "12px !important",
           maxHeight: isMobile ? "90vh" : "100%",
-          overflow: "hidden",
+          boxSizing: "border-box", // Ensure padding is included in width calculation
         },
       }}
       ModalProps={{
         keepMounted: true,
       }}
     >
-      <Box sx={{ display: "flex", flexDirection: "column", height: "100%" }}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          height: "100%",
+          maxWidth: "100%", // Ensure content doesn't overflow horizontally
+        }}
+      >
         {isMobile && (
           <Box
             sx={{
@@ -175,8 +182,16 @@ const AddApiServiceForm: React.FC<AddApiServiceFormProps> = ({
           </IconButton>
         </Box>
 
-        <Box sx={{ p: 1.5, flexGrow: 1, overflowY: "auto" }}>
-          <Stack spacing={3}>
+        <Box
+          sx={{
+            p: 1.5,
+            flexGrow: 1,
+            overflowY: "auto",
+            overflowX: "hidden", // Prevent horizontal scrolling
+            width: "100%", // Ensure full width
+          }}
+        >
+          <Stack spacing={3} sx={{ width: "100%" }}>
             <TextField
               label="API Name"
               name="name"
@@ -266,6 +281,11 @@ const AddApiServiceForm: React.FC<AddApiServiceFormProps> = ({
             borderTop: "1px solid #eee",
             display: "flex",
             justifyContent: "space-between",
+            width: "100%", // Ensure full width
+            position: "sticky", // Make the button area sticky
+            bottom: 0, // Stick to bottom
+            zIndex: 1, // Ensure it stays above content
+            backgroundColor: "background.paper", // Match background color
           }}
         >
           <Button onClick={onClose} variant="outlined">
